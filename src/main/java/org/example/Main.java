@@ -25,8 +25,10 @@ public class Main {
             WebElement openTab= chromeDriver.findElement(By.id("_ctl0_ContentHolder_Body_rpResults__ctl0_ucPlainArticle_oneArticleTitle"));
             if (openTab!=null){
                 openTab.click();
+                WebElement title= chromeDriver.findElement(By.className("article-main-title"));
                 WebElement subtitle= chromeDriver.findElement(By.className("article-sub-title"));
                 if (subtitle!=null){
+                    System.out.println(title.getText());
                     System.out.println(subtitle.getText());
                 }
             }
